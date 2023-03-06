@@ -13,7 +13,14 @@ This repository contains code used in demos during the presentation on microfron
 ## Running instructions
 TO BE DONE
 
+## Ports
+
+### Iframe microfrontends
+- Container: 4000
+- App 1: 4001
+- App 2: 4002
+
 ## Further reading:
-- [Cam Jackson, Microfrontends](https://martinfowler.com/articles/micro-frontends.html)
-- [Michael Geers, Micro Fronends in Action](https://micro-frontends.org/)
+- [Cam Jackson, Micro Frontends](https://martinfowler.com/articles/micro-frontends.html)
+- [Michael Geers, Micro Frontends in Action](https://micro-frontends.org/)
 - [Single SPA - FAQ](https://single-spa.js.org/docs/faq/)

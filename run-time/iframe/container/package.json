@@ -1,0 +1,17 @@
+{
+  "name": "container",
+  "version": "1.0.0",
+  "description": "Container microfrontend for iframe example",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve -p 4000 --single --cors"
+  },
+  "keywords": [
+    "container"
+  ],
+  "author": "Dawid Wijata",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}
