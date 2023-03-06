@@ -1,0 +1,28 @@
+{
+  "name": "kpmg-microfrontends",
+  "version": "1.0.0",
+  "description": "Snippets used for KPMG Tech Talk about microFE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BordowyRydwan/kpmg-microfrontends-presentation.git"
+  },
+  "keywords": [
+    "micro",
+    "frontend",
+    "microfrontends",
+    "mfe"
+  ],
+  "author": "Dawid Wijata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BordowyRydwan/kpmg-microfrontends-presentation/issues"
+  },
+  "homepage": "https://github.com/BordowyRydwan/kpmg-microfrontends-presentation#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
