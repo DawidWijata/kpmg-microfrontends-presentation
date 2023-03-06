@@ -4,7 +4,8 @@
   "description": "Snippets used for KPMG Tech Talk about microFE",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"npm:start:*\"",
+    "start:iframe": "cd run-time/iframe && npm run start"
   },
   "repository": {
     "type": "git",
