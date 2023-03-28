@@ -1,0 +1,39 @@
+{
+  "name": "container",
+  "version": "1.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "concurrently \"npm:start:*\" \"ng serve --port 4200\"",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
+    "start:search-bar-mfe": "cd ../search-bar && npm run start",
+    "start:basic-info-mfe": "cd ../summoner-basic-info && npm run start",
+    "start:rank-mfe": "cd ../summoner-rank && npm run start",
+    "start:masteries-mfe": "cd ../summoner-masteries && npm run start",
+    "start:match-history-mfe": "cd ../match-history && npm run start"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular-architects/module-federation": "^15.0.3",
+    "@angular/animations": "^15.2.0",
+    "@angular/common": "^15.2.0",
+    "@angular/compiler": "^15.2.0",
+    "@angular/core": "^15.2.0",
+    "@angular/forms": "^15.2.0",
+    "@angular/platform-browser": "^15.2.0",
+    "@angular/platform-browser-dynamic": "^15.2.0",
+    "@angular/router": "^15.2.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.12.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^15.2.1",
+    "@angular/cli": "~15.2.1",
+    "@angular/compiler-cli": "^15.2.0",
+    "concurrently": "^7.6.0",
+    "ngx-build-plus": "^15.0.0",
+    "typescript": "~4.9.4"
+  }
+}

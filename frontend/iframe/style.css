@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: rgb(42, 157, 143);
+  --dark-green: rgb(38, 70, 83);
+  --darker-green: rgb(26, 51, 61);
+  --yellow: rgb(233, 196, 106);
+  --orange: rgb(244, 162, 97);
+  --dark-orange: rgb(231, 111, 81);
+  --white: rgb(255, 255, 255);
+}
+
+body {
+  background-color: var(--darker-green);
+  min-height: 100vh;
+}
+
+.search-bar {
+  width: 100vw;
+  height: 60px;
+}
+
+.summoner-basic-info {
+  width: 1000px;
+  height: 200px;
+}
+
+.summoner-rank {
+  width: 300px;
+  height: 130px;
+}
+
+.summoner-masteries {
+  width: 300px;
+  height: 500px;
+}
+
+.match-history {
+  width: 700px;
+  height: 600px;
+}
+
+.micro-frontends__inner {
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.micro-frontends__inner__left {
+  width: 300px;
+}
+
+.micro-frontends__inner__right {
+  width: 700px;
+}

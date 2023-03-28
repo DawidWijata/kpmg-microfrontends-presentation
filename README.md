@@ -1,26 +1,30 @@
 # KPMG Microfrontends Presentation Snippets
 This repository contains code used in demos during the presentation on microfrontend implementations at KPMG Tech Talk. These implementations are based on:
 
-1. Server-side template composition
-2. Build-time integration
-   1. Module Federation
-3. Run-time integration
-   1. `<iframe>` element
-   2. Web Components
-   3. JS scripts
-   4. Single SPA
+1. `<iframe>` element
+2. JS scripts
+3. Single SPA
 
 ## Running instructions
+Run all the demo examples
+```
+npm run start
+```
 
-### Iframe
-Run commands
+Run the iframe example
+```
+npm run start:iframe
+```
 
-## Ports
+Run the Single SPA example
+```
+npm run start:single-spa
+```
 
-### Iframe microfrontends
-- Container: 4000
-- App 1: 4001
-- App 2: 4002
+Run the Module Federation example
+```
+npm run start:module-federation
+```
 
 ## Further reading:
 - [Cam Jackson, Micro Frontends](https://martinfowler.com/articles/micro-frontends.html)

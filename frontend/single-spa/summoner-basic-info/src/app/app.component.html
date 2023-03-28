@@ -1,0 +1,21 @@
+<section>
+  <article *ngIf="summonerInfo">
+    <div class="image-part">
+      <img [src]="'http://ddragon.leagueoflegends.com/cdn/13.6.1/img/profileicon/'+ summonerInfo.profileIconId + '.png'"
+        alt="Profile image">
+      <p>{{ summonerInfo.summonerLevel }}</p>
+    </div>
+    <div class="description-part">
+      <h2>
+        {{ summonerInfo.name }}
+      </h2>
+      <p>
+        Last profile update: 
+        <strong>{{ summonerInfo.revisionDate | date  : 'medium' }}</strong>
+      </p>
+      <button (click)="refresh()">
+        Refresh
+      </button>
+    </div>
+  </article>
+</section>

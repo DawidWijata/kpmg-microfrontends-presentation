@@ -1,0 +1,62 @@
+<section *ngIf="!loading || entries.length > 0">
+  <article>
+    <h2>Match history</h2>
+    <ul *ngIf="entries.length > 0">
+      <li *ngFor="let entry of entries">
+        <div [ngClass]="{ 'match-entry': true, 'win': participants[entry.metadata?.matchId!].win }">
+          <img class="champ" [src]="participants[entry.metadata?.matchId!].championName! | champUrlName">
+          <div class="match-entry__queue">
+            <p>
+              {{ entry.info?.queueId! | handleQueueId | async }} |
+              {{ participants[entry.metadata?.matchId!].win ? 'WIN' : 'LOSS' }}
+            </p>
+            <small>
+              {{ entry.info?.gameStartTimestamp | date : 'dd/MM/yyyy, h:mm a' }}
+            </small>
+            <small>
+              {{ entry.info?.gameDuration! * 1000 | date : 'mm:ss' : 'UTC' }}
+            </small>
+          </div>
+          <div class="match-entry__kda">
+            <strong>
+              {{ participants[entry.metadata?.matchId!].kills }}
+              /
+              {{ participants[entry.metadata?.matchId!].deaths }}
+              /
+              {{ participants[entry.metadata?.matchId!].assists }}
+            </strong>
+            <small>
+              {{ (participants[entry.metadata?.matchId!].kills! + participants[entry.metadata?.matchId!].assists!) / (participants[entry.metadata?.matchId!].deaths ?? 1) | number : '1.2-2'}}
+              KDA
+            </small>
+            <small>
+              {{ participants[entry.metadata?.matchId!].totalMinionsKilled! + participants[entry.metadata?.matchId!].neutralMinionsKilled! }} CS
+            </small>
+          </div>
+          <div class="match-entry__items">
+            <img onerror="this.style.display='none'" [src]="participants[entry.metadata?.matchId!].item0! | iconUrl" alt="" />
+            <img onerror="this.style.display='none'" [src]="participants[entry.metadata?.matchId!].item1! | iconUrl" alt="" />
+            <img onerror="this.style.display='none'" [src]="participants[entry.metadata?.matchId!].item2! | iconUrl" alt="" />
+            <img onerror="this.style.display='none'" [src]="participants[entry.metadata?.matchId!].item3! | iconUrl" alt="" />
+            <img onerror="this.style.display='none'" [src]="participants[entry.metadata?.matchId!].item4! | iconUrl" alt="" />
+            <img onerror="this.style.display='none'" [src]="participants[entry.metadata?.matchId!].item5! | iconUrl" alt="" />
+            <img onerror="this.style.display='none'" [src]="participants[entry.metadata?.matchId!].item6! | iconUrl" alt="" />
+          </div>
+          <div class="match-entry__util-stats">
+            <small>{{ participants[entry.metadata?.matchId!].totalDamageDealtToChampions! }} DMG dealt</small>
+            <small>{{ participants[entry.metadata?.matchId!].totalDamageTaken! }} DMG taken</small>
+            <small>{{ participants[entry.metadata?.matchId!].visionScore! }} vision score</small>
+          </div>
+        </div>
+      </li>
+      <li>
+        <button (click)="getMatchHistoryEntries()">
+          Show more
+        </button>
+      </li>
+    </ul>
+    <p *ngIf="loading">
+      Matches loading...
+    </p>
+  </article>
+</section>

@@ -1,0 +1,19 @@
+<single-spa-router>
+  <main class="micro-frontends">
+    <route default>
+      <application name="@single-spa-mfe/search-bar"></application>
+      <div class="micro-frontends__inner">
+        <div class="summoner-basic-info">
+          <application name="@single-spa-mfe/summoner-basic-info"></application>
+        </div>
+        <div class="micro-frontends__inner__left">
+          <application name="@single-spa-mfe/summoner-ranks"></application>
+          <application name="@single-spa-mfe/summoner-masteries"></application>
+        </div>
+        <div class="micro-frontends__inner__right">
+          <application name="@single-spa-mfe/match-history"></application>
+        </div>
+      </div>
+    </route>
+  </main>
+</single-spa-router>

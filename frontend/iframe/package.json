@@ -1,0 +1,20 @@
+{
+  "name": "iframe-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm:start:*\" \"serve -s --cors -p 4000\"",
+    "start:search-bar-mfe": "cd search-bar && npm run start",
+    "start:match-history-mfe": "cd match-history && npm run start",
+    "start:basic-info-mfe": "cd summoner-basic-info && npm run start",
+    "start:rank-mfe": "cd summoner-rank && npm run start",
+    "start:masteries-mfe": "cd summoner-masteries && npm run start"
+  },
+  "author": "Dawid Wijata",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "serve": "^14.2.0"
+  }
+}

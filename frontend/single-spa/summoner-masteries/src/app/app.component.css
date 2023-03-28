@@ -1,0 +1,82 @@
+:host {
+  --green: rgb(42, 157, 143);
+  --dark-green: rgb(38, 70, 83);
+  --darker-green: rgb(26, 51, 61);
+  --yellow: rgb(233, 196, 106);
+  --orange: rgb(244, 162, 97);
+  --dark-orange: rgb(231, 111, 81);
+  --white: rgb(255, 255, 255);
+}
+
+section {
+  width: 300px;
+  padding: 15px 10px;
+  color: var(--white);
+  background-color: var(--darker-green);
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+article {
+  padding: 15px 20px;
+  background-color: var(--dark-green);
+  border-radius: 5px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+strong {
+  font-size: 1rem;
+  color: var(--orange);
+}
+
+small {
+  color: var(--orange);
+  display: block;
+  font-size: 0.7rem;
+}
+
+p {
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  border-bottom: 1px var(--darker-green) solid;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+li > div {
+  padding: 5px 10px;
+}
+
+img {
+  width: 48px;
+  height: 48px;
+}
+
+button {
+  all: unset;
+
+  background-color: var(--green);
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}

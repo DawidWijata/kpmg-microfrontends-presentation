@@ -1,0 +1,22 @@
+<section *ngIf="masteries.length > 0">
+  <article>
+    <h2>Top champions</h2>
+    <ul>
+      <li *ngFor="let mastery of masteries | slice : 0 : champsAmount">
+        <img
+          [src]="mastery.championName! | champUrlName"
+          [alt]="mastery.championName">
+        <div>
+          <p>{{ mastery.championName }}</p>
+          <small>{{ mastery.masteryInfo?.championPoints }} mastery points</small>
+          <small>Last played: {{ mastery.masteryInfo?.lastPlayTime | date : 'dd/MM/yyyy, h:mm a' }}</small>
+        </div>
+      </li>
+      <li>
+        <button *ngIf="champsAmount < masteries.length" (click)="expand()">
+          Show more
+        </button>
+      </li>
+    </ul>
+  </article>
+</section>

@@ -1,0 +1,15 @@
+<section *ngIf="leagueEntries.length > 0">
+  <article *ngFor="let entry of leagueEntries">
+    <h2>{{ getQueueFriendlyName(entry.queueType!) }}</h2>
+    <div class="article-container">
+      <div>
+        <strong>{{ entry.tier }} {{ entry.rank }}</strong>
+        <p>{{ entry.leaguePoints }} LP</p>
+      </div>
+      <div>
+        <p>{{ entry.wins }}W {{ entry.losses }}L</p>
+        <small>{{ (entry.wins! / (entry.losses! + entry.wins!) * 100) | number: '2.0-0' }}% Win Rate</small>
+      </div>
+    </div>
+  </article>
+</section>

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm:start:*\"",
-    "start:iframe": "cd run-time/iframe && npm run start"
+    "start:iframe": "cd frontend/iframe && npm run start",
+    "start:single-spa": "cd frontend/single-spa && npm run start",
+    "start:module-federation": "cd frontend/module-federation/container && npm run start"
   },
   "repository": {
     "type": "git",

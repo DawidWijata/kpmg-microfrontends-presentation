@@ -1,0 +1,21 @@
+<header>
+  <form *ngIf="regions.length > 0" [formGroup]="summoner" (ngSubmit)="onSubmit()">
+    <input
+      formControlName="nickname"
+      type="text"
+      placeholder="Enter summoner name..."
+      maxlength="32"
+    />
+    <select formControlName="region" name="region-select" id="region-select">
+      <option *ngFor="let region of regions" [value]="region">
+        {{ region }}
+      </option>
+    </select>
+    <button type="submit">
+      <span class="material-symbols-outlined">
+        person_search
+      </span>
+    </button>
+  </form>
+</header>
+

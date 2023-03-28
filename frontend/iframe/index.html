@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Iframe example</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="micro-frontends">
+      <iframe class="search-bar" src="http://localhost:4001" frameborder="0"
+        sandbox="allow-same-origin allow-scripts allow-forms allow-top-navigation allow-pointer-lock"></iframe>
+      <div class="micro-frontends__inner">
+        <iframe class="summoner-basic-info" src="http://localhost:4002" frameborder="0"
+        sandbox="allow-same-origin allow-scripts allow-forms allow-top-navigation allow-pointer-lock"></iframe>
+        <div class="micro-frontends__inner__left">
+          <iframe class="summoner-rank" src="http://localhost:4003" frameborder="0"
+          sandbox="allow-same-origin allow-scripts allow-forms allow-top-navigation allow-pointer-lock"></iframe>
+          <iframe class="summoner-masteries" src="http://localhost:4004" frameborder="0"
+          sandbox="allow-same-origin allow-scripts allow-forms allow-top-navigation allow-pointer-lock"></iframe>
+        </div>
+        <div class="micro-frontends__inner__right">
+          <iframe class="match-history" src="http://localhost:4005" frameborder="0"
+          sandbox="allow-same-origin allow-scripts allow-forms allow-top-navigation allow-pointer-lock"></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

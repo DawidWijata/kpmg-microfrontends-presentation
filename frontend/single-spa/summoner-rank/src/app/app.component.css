@@ -1,0 +1,56 @@
+:host {
+  --green: rgb(42, 157, 143);
+  --dark-green: rgb(38, 70, 83);
+  --darker-green: rgb(26, 51, 61);
+  --yellow: rgb(233, 196, 106);
+  --orange: rgb(244, 162, 97);
+  --dark-orange: rgb(231, 111, 81);
+  --white: rgb(255, 255, 255);
+}
+
+section {
+  width: 300px;
+  padding: 15px 10px;
+  color: var(--white);
+  background-color: var(--darker-green);
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+article {
+  padding: 10px 20px;
+  background-color: var(--dark-green);
+  border-radius: 5px;
+}
+
+h2 {
+  margin-bottom: 0px;
+  font-size: 1rem;
+}
+
+strong {
+  font-size: 1rem;
+  color: var(--orange);
+}
+
+small {
+  color: var(--green);
+}
+
+p {
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.article-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.article-container div:nth-child(2) {
+  font-size: 0.9rem;
+}
